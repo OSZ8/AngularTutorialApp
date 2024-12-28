@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(to bottom, #f4f4f9, #e6e6eb);
+  color: #333;
+}
+
+/* Título principal */
+h1 {
+  color: #3f51b5;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Secciones */
+section {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Subtítulos */
+h2 {
+  color: #3f51b5;
+  margin-bottom: 10px;
+}
+
+/* Listas */
+ul li {
+  list-style-type: square;
+  margin-bottom: 8px;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+
+/* Enlaces */
+a {
+  color: #3f51b5;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #283593;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background: #3f51b5;
+  color: white;
+  font-size: 14px;
+}
