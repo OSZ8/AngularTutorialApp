@@ -3,52 +3,93 @@
 
 <section>
   <h2>1. Justificación del Framework</h2>
-  <p>Angular es un framework de desarrollo web basado en TypeScript que permite crear aplicaciones dinámicas, escalables y de alto rendimiento.</p>
-  <p>Se utiliza principalmente para desarrollar Single Page Applications (SPA), donde el contenido se actualiza dinámicamente sin necesidad de recargar la página.</p>
+  <p>Angular es un framework de desarrollo web desarrollado por Google y basado en TypeScript. Es una herramienta poderosa para construir aplicaciones dinámicas, escalables y de alto rendimiento que ofrecen experiencias de usuario modernas e interactivas.</p>
+  <p>Es especialmente conocido por su capacidad para desarrollar Single Page Applications (SPA), donde el contenido de la página se actualiza dinámicamente sin necesidad de recargar completamente el navegador, lo que mejora la velocidad y la experiencia del usuario.</p>
   <ul>
-    <li><strong>¿Para qué sirve?</strong> Angular se usa para construir aplicaciones web robustas con funcionalidades complejas y una experiencia de usuario fluida.</li>
-    <li><strong>¿Qué aplicaciones tiene?</strong> Angular es ideal para aplicaciones empresariales, paneles de control, aplicaciones móviles híbridas y plataformas de comercio electrónico.</li>
-    <li><strong>¿Sobre qué lenguajes se apoya?</strong> Está basado en <strong>TypeScript</strong>, un superset de JavaScript que incluye tipado estático.</li>
-    <li><strong>¿Qué prerrequisitos necesita?</strong> Para usar Angular necesitas conocimientos básicos de HTML, CSS y JavaScript.</li>
+    <li><strong>¿Para qué sirve?</strong> Angular se utiliza para construir aplicaciones web robustas con funcionalidades avanzadas, como formularios dinámicos, integración con APIs, y flujos de navegación complejos. Es ideal para proyectos que requieren un desarrollo rápido y una gestión estructurada del código.</li>
+    <li><strong>¿Qué aplicaciones tiene?</strong> Angular es ideal para:
+      <ul>
+        <li>Aplicaciones empresariales (ERP, CRM).</li>
+        <li>Paneles de control interactivos.</li>
+        <li>Aplicaciones móviles híbridas.</li>
+        <li>Plataformas de comercio electrónico.</li>
+        <li>Sistemas educativos y de gestión de contenidos.</li>
+      </ul>
+    </li>
+    <li><strong>¿Sobre qué lenguajes se apoya?</strong> Angular está basado en <strong>TypeScript</strong>, un superset de JavaScript que incluye tipado estático y herramientas modernas para depuración y refactorización. Esto lo hace más seguro y escalable que JavaScript puro.</li>
+    <li><strong>¿Qué prerrequisitos necesita?</strong> Para usar Angular es necesario:
+      <ul>
+        <li>Conocimientos básicos de HTML, CSS y JavaScript.</li>
+        <li>Familiaridad con el modelo de componentes y módulos.</li>
+        <li>Entender conceptos como Promesas y Observables (RxJS), que son fundamentales en Angular.</li>
+      </ul>
+    </li>
   </ul>
+  <p>Angular se diferencia de otros frameworks como React o Vue.js por ser una solución completa, proporcionando herramientas integradas para enrutamiento, inyección de dependencias y manejo del estado global.</p>
 </section>
 
 <section>
   <h2>2. Instalación</h2>
-  <p>Para comenzar a usar Angular, necesitas seguir estos pasos:</p>
+  <p>Para comenzar a usar Angular, sigue estos pasos detallados:</p>
   <ol>
     <li>
-      <strong>Instalar Node.js:</strong> Descarga e instala Node.js desde su página oficial: 
-      <a href="https://nodejs.org" target="_blank">https://nodejs.org</a>. Esto instalará npm (Node Package Manager) automáticamente.
+      <strong>Instalar Node.js:</strong> 
+      Angular depende de Node.js para manejar dependencias y ejecutar su servidor de desarrollo. Descarga e instala Node.js desde su página oficial:
+      <a href="https://nodejs.org" target="_blank">https://nodejs.org</a>. Esto instalará automáticamente npm (Node Package Manager).
+      <br><em>Nota:</em> Se recomienda instalar la versión LTS para mayor estabilidad.
     </li>
     <li>
-      <strong>Instalar Angular CLI:</strong> Una vez tengas npm, instala Angular CLI con el siguiente comando en tu terminal:
-      <code>npm install -g &#64;angular/cli</code>.
+      <strong>Verificar la instalación de Node.js y npm:</strong>
+      Después de instalar Node.js, verifica que la instalación fue exitosa ejecutando en la terminal:
+      <pre><code>node -v</code></pre>
+      <pre><code>npm -v</code></pre>
+      Esto mostrará las versiones instaladas. Si no se muestran, revisa tu instalación.
     </li>
     <li>
-      <strong>Crear un nuevo proyecto:</strong> Crea tu primer proyecto Angular ejecutando:
-      <code>ng new nombre-del-proyecto</code>.
+      <strong>Instalar Angular CLI:</strong> 
+      La CLI (Command Line Interface) de Angular simplifica la creación y gestión de proyectos. Instálala globalmente con:
+      <pre><code>npm install -g &#64;angular/cli</code></pre>
+      Para verificar que se instaló correctamente:
+      <pre><code>ng version</code></pre>
     </li>
     <li>
-      <strong>Ejecutar el servidor de desarrollo:</strong> Navega al directorio del proyecto con:
-      <code>cd nombre-del-proyecto</code>, y luego ejecuta:
-      <code>ng serve</code>. Abre tu navegador en 
+      <strong>Crear un nuevo proyecto:</strong>
+      Una vez instalada la CLI, genera tu primer proyecto con:
+      <pre><code>ng new nombre-del-proyecto</code></pre>
+      Sigue las indicaciones en la terminal para seleccionar las opciones deseadas (como el estilo CSS o SCSS).
+    </li>
+    <li>
+      <strong>Ejecutar el servidor de desarrollo:</strong>
+      Navega al directorio del proyecto recién creado:
+      <pre><code>cd nombre-del-proyecto</code></pre>
+      Ejecuta el servidor con:
+      <pre><code>ng serve</code></pre>
+      Abre tu navegador en 
       <a href="http://localhost:4200" target="_blank">http://localhost:4200</a> para ver la aplicación funcionando.
+    </li>
+    <li>
+      <strong>Solución de problemas comunes:</strong>
+      <ul>
+        <li><strong>Error: "ng no se reconoce como un comando interno o externo":</strong>
+          Asegúrate de que Node.js y npm estén correctamente instalados y que el directorio de npm esté en tu variable de entorno PATH.</li>
+        <li><strong>Permisos en Linux/Mac:</strong> Si encuentras problemas de permisos al usar <code>npm install -g</code>, usa <code>sudo</code> antes del comando.</li>
+      </ul>
     </li>
   </ol>
 </section>
 
 <section>
   <h2>3. Primeros Pasos</h2>
-  <p>Una vez que hayas creado tu proyecto Angular, puedes comenzar modificando el componente principal para ver cómo funciona. Aquí tienes un ejemplo para mostrar un "Hola Mundo":</p>
+  <p>Una vez que hayas creado tu proyecto Angular, es hora de explorar cómo funciona. Comencemos con un ejemplo simple de "Hola Mundo" y avancemos hacia conceptos básicos que son fundamentales en Angular.</p>
   <ol>
     <li>
-      Abre el archivo <code>src/app/app.component.ts</code> en tu editor de código.
-    </li>
-    <li>
-      Sustituye el contenido del archivo por el siguiente código:
-      <pre>
-        <code>
+      <strong>Mostrar "Hola Mundo":</strong>
+      Modifica el componente principal para mostrar un mensaje en pantalla:
+      <ol>
+        <li>Abre el archivo <code>src/app/app.component.ts</code> en tu editor de código.</li>
+        <li>
+          Sustituye el contenido del archivo por el siguiente código:
+          <pre><code>
 import &#123; Component &#125; from '&#64;angular/core';
 
 &#64;Component(&#123;
@@ -64,53 +105,181 @@ import &#123; Component &#125; from '&#64;angular/core';
   `]
 &#125;)
 export class AppComponent &#123;&#125;
-        </code>
-      </pre>
+          </code></pre>
+        </li>
+        <li>
+          Guarda los cambios y recarga la página en 
+          <a href="http://localhost:4200" target="_blank">http://localhost:4200</a>.
+          Verás el mensaje <strong>"Hola Mundo desde Angular!"</strong> en tu navegador.
+        </li>
+      </ol>
     </li>
+
     <li>
-      Guarda los cambios y recarga la página. Deberías ver el mensaje "Hola Mundo desde Angular!" en tu navegador.
+      <strong>Usar Data Binding:</strong>
+      Angular permite enlazar datos entre el componente y la plantilla HTML. Este ejemplo muestra cómo utilizar Data Binding para mostrar un nombre dinámicamente:
+      <ol>
+        <li>
+          En <code>app.component.ts</code>, añade una propiedad llamada <code>nombre</code>:
+          <pre><code>
+export class AppComponent &#123;
+  nombre: string = 'Oscar';
+&#125;
+          </code></pre>
+        </li>
+        <li>
+          En <code>app.component.html</code>, utiliza la propiedad para mostrar el nombre dinámicamente:
+          <pre><code>
+&lt;h1&gt;Hola, {{ nombre }}!&lt;/h1&gt;
+          </code></pre>
+        </li>
+        <li>
+          Guarda los cambios y recarga la página. Deberías ver <strong>"Hola, Oscar!"</strong> en el navegador.
+        </li>
+      </ol>
+    </li>
+
+    <li>
+      <strong>Capturar eventos del usuario:</strong>
+      Añade un botón que responda a un clic:
+      <ol>
+        <li>
+          En <code>app.component.ts</code>, define un método:
+          <pre><code>
+export class AppComponent &#123;
+  mensaje: string = '';
+
+  mostrarMensaje() &#123;
+    this.mensaje = '¡Has hecho clic!';
+  &#125;
+&#125;
+          </code></pre>
+        </li>
+        <li>
+          En <code>app.component.html</code>, añade un botón y muestra el mensaje:
+          <pre><code>
+&lt;button (click)="mostrarMensaje()"&gt;Haz clic aquí&lt;/button&gt;
+&lt;p&gt;{{ mensaje }}&lt;/p&gt;
+          </code></pre>
+        </li>
+        <li>
+          Guarda los cambios y recarga la página. Al hacer clic en el botón, aparecerá el mensaje <strong>"¡Has hecho clic!"</strong>.
+        </li>
+      </ol>
     </li>
   </ol>
 </section>
 
 <section>
   <h2>4. Utilización del Framework</h2>
-  <p>Angular se basa en una arquitectura de componentes que permite dividir la aplicación en partes reutilizables y fácilmente gestionables. A continuación, te mostramos los conceptos clave:</p>
+  <p>Angular se basa en una arquitectura modular que permite dividir la aplicación en partes reutilizables y fácilmente gestionables. Aquí están los conceptos fundamentales:</p>
   <ul>
     <li>
-      <strong>Componentes:</strong> Son las piezas fundamentales de cualquier aplicación Angular. Cada componente consta de un archivo HTML (vista), CSS (estilos) y TypeScript (lógica).
+      <strong>Componentes:</strong> Son las piezas fundamentales de cualquier aplicación Angular. Cada componente consta de:
+      <ul>
+        <li><code>.html:</code> Define la estructura visual (vista).</li>
+        <li><code>.css:</code> Define los estilos específicos del componente.</li>
+        <li><code>.ts:</code> Define la lógica y el comportamiento del componente (TypeScript).</li>
+      </ul>
     </li>
     <li>
-      <strong>Módulos:</strong> Los módulos agrupan componentes relacionados y gestionan la organización de la aplicación. El módulo principal es <code>AppModule</code>.
+      <strong>Módulos:</strong> Los módulos agrupan componentes, servicios y otras funcionalidades relacionadas. 
+      <ul>
+        <li>El módulo principal es <code>AppModule</code>, definido en <code>app.module.ts</code>.</li>
+        <li>Otros módulos se pueden crear para organizar mejor grandes aplicaciones (p. ej., <code>AuthModule</code>, <code>AdminModule</code>).</li>
+      </ul>
     </li>
     <li>
-      <strong>Servicios:</strong> Los servicios permiten compartir lógica o datos entre varios componentes. Se definen con decoradores como <code>&#64;Injectable</code>.
+      <strong>Servicios:</strong> Permiten compartir lógica o datos entre componentes. Se definen con decoradores como <code>&#64;Injectable</code> y se inyectan en los componentes que los necesitan.
     </li>
     <li>
-      <strong>Enrutamiento:</strong> Angular incluye un sistema de rutas que permite navegar entre diferentes páginas o vistas dentro de la aplicación.
+      <strong>Enrutamiento:</strong> Angular incluye un sistema de rutas que permite navegar entre diferentes páginas o vistas dentro de la aplicación. Esto se define en <code>app-routing.module.ts</code>.
     </li>
   </ul>
-  <p>A continuación, un ejemplo práctico para añadir un nuevo componente:</p>
+
+  <p>A continuación, ejemplos prácticos para trabajar con estos conceptos:</p>
+
   <ol>
     <li>
-      Crea un nuevo componente ejecutando el siguiente comando en tu terminal:
-      <code>ng generate component nombre-del-componente</code>.
+      <strong>Crear un nuevo componente:</strong>
+      <ol>
+        <li>
+          Usa el comando:
+          <pre><code>ng generate component nombre-del-componente</code></pre>
+        </li>
+        <li>
+          Angular generará automáticamente los archivos necesarios:
+          <ul>
+            <li><code>nombre-del-componente.component.ts</code></li>
+            <li><code>nombre-del-componente.component.html</code></li>
+            <li><code>nombre-del-componente.component.css</code></li>
+            <li><code>nombre-del-componente.component.spec.ts</code></li>
+          </ul>
+        </li>
+        <li>
+          Edita el archivo <code>nombre-del-componente.component.html</code> para agregar contenido, por ejemplo:
+          <pre><code>&lt;h2&gt;Bienvenido al nuevo componente!&lt;/h2&gt;</code></pre>
+        </li>
+        <li>
+          Incluye el componente en la vista principal usando su selector, por ejemplo:
+          <pre><code>&lt;app-nombre-del-componente&gt;&lt;/app-nombre-del-componente&gt;</code></pre>
+        </li>
+      </ol>
     </li>
+
     <li>
-      Angular generará automáticamente los archivos necesarios:
-      <code>nombre-del-componente.component.ts</code>, <code>.html</code>, <code>.css</code>, y <code>.spec.ts</code>.
+      <strong>Configurar una ruta para el componente:</strong>
+      <ol>
+        <li>
+          Abre el archivo <code>app-routing.module.ts</code>.
+        </li>
+        <li>
+          Añade una nueva ruta en el arreglo <code>Routes</code>:
+          <pre><code>
+const routes: Routes = [
+  &#123; path: 'nuevo', component: NombreDelComponenteComponent &#125;
+];
+          </code></pre>
+        </li>
+        <li>
+          Navega a <code>/nuevo</code> en tu navegador para ver el componente.
+        </li>
+      </ol>
     </li>
+
     <li>
-      Edita el archivo <code>nombre-del-componente.component.html</code> para agregar contenido, por ejemplo:
-      <pre>
-        <code>
-&lt;h2&gt;Bienvenido al nuevo componente!&lt;/h2&gt;
-        </code>
-      </pre>
-    </li>
-    <li>
-      Incluye el componente en la vista principal usando su selector, por ejemplo:
-      <code>&lt;app-nombre-del-componente&gt;&lt;/app-nombre-del-componente&gt;</code>.
+      <strong>Crear un servicio:</strong>
+      <ol>
+        <li>
+          Usa el comando:
+          <pre><code>ng generate service nombre-del-servicio</code></pre>
+        </li>
+        <li>
+          Angular generará un archivo como <code>nombre-del-servicio.service.ts</code>. Define lógica en el servicio:
+          <pre><code>
+import &#123; Injectable &#125; from '&#64;angular/core';
+
+&#64;Injectable(&#123; providedIn: 'root' &#125;)
+export class NombreDelServicioService &#123;
+  obtenerMensaje(): string &#123;
+    return 'Mensaje desde el servicio';
+  &#125;
+&#125;
+          </code></pre>
+        </li>
+        <li>
+          Inyecta el servicio en un componente para usarlo:
+          <pre><code>
+import &#123; NombreDelServicioService &#125; from './nombre-del-servicio.service';
+
+export class AppComponent &#123;
+  constructor(private servicio: NombreDelServicioService) &#123; &#125;
+
+  mensaje = this.servicio.obtenerMensaje();
+&#125;
+          </code></pre>
+        </li>
+      </ol>
     </li>
   </ol>
 </section>
@@ -120,55 +289,73 @@ export class AppComponent &#123;&#125;
   <p>Angular organiza una aplicación en módulos y componentes que trabajan juntos para manejar la lógica, la presentación y la navegación. Aquí te explicamos cómo funciona:</p>
   <ul>
     <li>
-      <strong>Páginas y vistas:</strong> Cada página en Angular está representada por un componente, que controla su contenido (HTML), estilos (CSS) y comportamiento (TypeScript).
-    </li>
-    <li>
-      <strong>Ficheros clave:</strong> Cada componente consta de:
+      <strong>Interacción entre componentes:</strong>
+      <p>Los componentes pueden comunicarse mediante:</p>
       <ul>
-        <li><code>.component.ts:</code> Define la lógica y el comportamiento del componente.</li>
-        <li><code>.component.html:</code> Define la estructura visual de la página.</li>
-        <li><code>.component.css:</code> Contiene los estilos específicos del componente.</li>
+        <li>
+          <code>&#64;Input:</code> Permite que un componente padre envíe datos a un componente hijo.
+        </li>
+        <li>
+          <code>&#64;Output:</code> Permite que un componente hijo envíe datos al componente padre mediante eventos.
+        </li>
       </ul>
-    </li>
-    <li>
-      <strong>Interacción entre componentes:</strong> Los componentes pueden comunicarse mediante entradas (<code>&#64;Input</code>) y salidas (<code>&#64;Output</code>), lo que permite compartir datos.
-    </li>
-    <li>
-      <strong>Enrutamiento:</strong> Angular utiliza un sistema de rutas definido en <code>app-routing.module.ts</code> para conectar diferentes componentes con las URLs correspondientes.
-    </li>
-  </ul>
-  <p>Por ejemplo, para crear una nueva página:</p>
-  <ol>
-    <li>
-      Crea un componente usando:
-      <code>ng generate component nombre-del-componente</code>.
-    </li>
-    <li>
-      Define su ruta en el archivo <code>app-routing.module.ts</code>, así:
+      <p><em>Ejemplo:</em> Enviar un mensaje desde un componente hijo al componente padre:</p>
       <pre>
         <code>
-const routes: Routes = [
-  &#123; path: 'nuevo', component: NuevoComponenteComponent &#125;
-];
+<!-- Componente hijo -->
+import &#123; Component, Output, EventEmitter &#125; from '&#64;angular/core';
+
+&#64;Component(&#123;
+  selector: 'app-hijo',
+  template: `
+    &lt;button (click)="enviarMensaje()"&gt;Enviar mensaje&lt;/button&gt;
+  `
+&#125;)
+export class HijoComponent &#123;
+&#64;Output() mensajeEnviado = new EventEmitter&lt;string&gt;();
+
+  enviarMensaje() &#123;
+    this.mensajeEnviado.emit('Hola desde el componente hijo');
+  &#125;
+&#125;
         </code>
       </pre>
     </li>
-    <li>
-      Navega a <code>/nuevo</code> en tu navegador para ver la nueva página.
-    </li>
-  </ol>
+  </ul>
 </section>
 
 <section>
   <h2>6. Conclusiones</h2>
-  <p>Angular es un framework poderoso y versátil para desarrollar aplicaciones web modernas. Su arquitectura basada en componentes y módulos permite crear proyectos escalables y fácilmente mantenibles.</p>
-  <p>A lo largo de este tutorial, hemos explorado:</p>
+  <p>Angular se ha consolidado como uno de los frameworks más populares y robustos para el desarrollo de aplicaciones web modernas. Su arquitectura basada en componentes y módulos permite construir proyectos que son escalables, reutilizables y mantenibles a largo plazo.</p>
+  
+  <p>A lo largo de este tutorial, hemos aprendido:</p>
   <ul>
-    <li>La importancia y justificación de usar Angular.</li>
-    <li>Los pasos necesarios para instalar y configurar un proyecto.</li>
-    <li>Cómo realizar una primera aproximación con un ejemplo básico.</li>
-    <li>Los conceptos clave para estructurar y expandir aplicaciones, como componentes, servicios y enrutamiento.</li>
+    <li>La importancia de Angular en el ecosistema de desarrollo web y los motivos para utilizarlo.</li>
+    <li>Cómo instalar y configurar Angular desde cero utilizando herramientas como Node.js y Angular CLI.</li>
+    <li>El proceso de crear una aplicación básica, incluyendo un ejemplo de "Hola Mundo".</li>
+    <li>Los conceptos clave de Angular, como componentes, módulos, servicios y enrutamiento, para estructurar y expandir aplicaciones.</li>
+    <li>La interacción entre componentes y cómo manejar datos y eventos de manera eficiente.</li>
   </ul>
-  <p>Angular tiene una curva de aprendizaje moderada, pero su ecosistema robusto y la comunidad activa ofrecen muchos recursos para superar cualquier desafío.</p>
-  <p>¡Gracias por seguir este tutorial, y esperamos que sea el inicio de tus proyectos con Angular!</p>
+
+  <p>Angular no solo ofrece herramientas avanzadas, sino que también fomenta buenas prácticas de desarrollo, como la separación de preocupaciones, la reutilización de código y la modularidad. Sin embargo, es importante destacar que su curva de aprendizaje, aunque moderada, puede ser un desafío inicial para los nuevos desarrolladores.</p>
+
+  <h3>Fortalezas de Angular</h3>
+  <ul>
+    <li>Un ecosistema integral que incluye herramientas como CLI, RxJS y Angular Material.</li>
+    <li>Compatibilidad con aplicaciones de una sola página (SPA) y proyectos más complejos.</li>
+    <li>Un sistema de enrutamiento potente y flexible.</li>
+    <li>Un enfoque en la productividad del desarrollador, con funcionalidades como la inyección de dependencias y herramientas para pruebas unitarias.</li>
+  </ul>
+
+  <h3>Recomendaciones para futuros desarrolladores</h3>
+  <ol>
+    <li>Comenzar con proyectos pequeños para familiarizarse con los conceptos básicos antes de abordar aplicaciones más complejas.</li>
+    <li>Explorar la documentación oficial de Angular y recursos de la comunidad para mejorar continuamente.</li>
+    <li>Practicar la creación de componentes y servicios reutilizables para fomentar buenas prácticas de desarrollo.</li>
+    <li>Colaborar en proyectos en equipo para comprender cómo Angular se utiliza en entornos profesionales.</li>
+  </ol>
+
+  <p>En resumen, Angular es una herramienta poderosa que permite a los desarrolladores llevar sus ideas al siguiente nivel. Su robustez, flexibilidad y comunidad activa lo convierten en una excelente opción para proyectos de cualquier escala.</p>
+
+  <p>¡Gracias por seguir este tutorial! Esperamos que este sea el comienzo de un emocionante viaje en el desarrollo con Angular. ¡Buena suerte en tus futuros proyectos!</p>
 </section>
